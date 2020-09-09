@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <span *ngFor="let country of countries">
+            <div class="card pad-15" style="width: 18rem;" (mouseover)="infoFooter(country.population)">
+                <img class="card-img-top" src="{{ country.flag }}" alt="{{ country.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ country.name }}</h5>
+                    <p class="card-text"> 
+                        Capital: {{ country.capital }}<br>
+                        Region: {{ country.region }}
+                    </p>
+                </div>
+              </div>
+        </span>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <div class="footer-copyright text-center py-3">
+      <a id="info">Country's population: {{ info }}</a>
+    </div>
+</footer>
